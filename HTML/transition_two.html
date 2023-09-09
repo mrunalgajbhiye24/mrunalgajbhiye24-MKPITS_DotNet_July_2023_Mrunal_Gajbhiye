@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+ <html>
+ <style>
+#example:hover  .childbox
+            { -webkit-border-radius:30px;-webkit-transform: linear; 
+               margin-left:230px; }  
+
+#example1:hover  .childbox
+            {-webkit-border-radius:30px;-webkit-transform: rotate(360deg); 
+            margin-left:230px; }          
+             
+.childbox{font-size:12px;width:100px; height:60px;margin:10px; }
+           
+#ease.childbox{ -webkit-transition:  5s ;
+-webkit-transition-delay:1s;
+background-color:black;
+border:1px solid black;color: white; }
+ </style>
+      
+<body>
+ <p>Flowers</p>
+        <div id="example">
+          <div id="ease" class="childbox">
+		<p align=center style="font-size: 20px;">Sunflower</p>
+
+	  </div>
+          
+        </div>
+
+   <div id="example1">
+          <div id="ease" class="childbox">
+		<p align=center style="font-size: 20px;">Rose</p>
+
+	  </div>
+          
+        </div>
+ 
+    </body>
+     
+</html>
