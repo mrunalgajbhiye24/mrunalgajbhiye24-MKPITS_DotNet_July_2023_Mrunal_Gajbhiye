@@ -1,0 +1,21 @@
+<html>
+    <script language="javascript">
+        function Circle()
+        {
+            var radius=parseFloat(document.getElementById("r1").value);
+
+            var area=3.14*radius*radius;
+            document.getElementById("res").innerHTML="area of circle="+area;
+
+            var circ=2*3.14*radius;
+            document.getElementById("result").innerHTML="circumference="+circ;
+        }
+        
+    </script>
+    <form name="f1">
+        enter radius :<input type="text" id="r1"/><br><br>
+        <input type="button" value="ok" onclick="Circle();"/><br><br>
+        <span id="res">Area</span><br>
+        <span id="result">circumference</span>
+    </form>
+</html>

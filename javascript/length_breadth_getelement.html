@@ -1,0 +1,17 @@
+<html>
+    <script language="javascript">
+        function calculate()
+        {
+            var length=document.getElementById("l1").value;
+            var breadth=document.getElementById("b1").value;
+            var ans=length*breadth;
+            document.getElementById("result").innerHTML="area of rectangle="+ans;
+        }
+    </script>
+    <form name="f1">
+        enter length :<input type="text" id="l1"/><br><br>
+        enter breadth :<input type="text" id="b1"/><br><br>
+        <input type="button" value="Ok" onclick="calculate();"><br><br>
+        <span id="result">Result</span>
+    </form>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <form name="f1">
+        enter length: <input type="text" id="l1"/><br><br>
+        enter breadth: <input type="text" id="b1"/><br><br>
+        enter height: <input type="text" id="h1"/><br><br>
+        <input type="button" value="ok" onclick="volume();"/><br><br>
+        <span id="result">Result</span>
+
+    </form>
+    <script language="javascript">
+        function volume()
+        {
+            var length=document.getElementById("l1").value;
+            var breadth=document.getElementById("b1").value;
+            var height=document.getElementById("h1").value;
+            var Volume=length*breadth*height;
+            document.getElementById("result").innerHTML="volume="+Volume;
+        }
+    </script>
+</html>
