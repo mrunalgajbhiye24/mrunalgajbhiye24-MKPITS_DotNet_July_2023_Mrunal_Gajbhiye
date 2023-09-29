@@ -1,0 +1,20 @@
+<html>
+    <form name="f1">
+        enter subject1 marks: <input type="text" id="t1"/><br><br>
+        enter subject2 marks: <input type="text" id="t2"/><br><br>
+        enter subject3 marks: <input type="text" id="t3"/><br><br>
+        <input type="button" value="ok" onclick="subject();"/><br><br>
+        <span id="result">Result</span>
+    </form>
+
+    <script language="javascript">
+        function subject()
+        {
+            var subject1marks=parseFloat(document.getElementById("t1").value);
+            var subject2marks=parseFloat(document.getElementById("t2").value);
+            var subject3marks=parseFloat(document.getElementById("t3").value);
+            var totalmarks=subject1marks+subject2marks+subject3marks;
+            document.getElementById("result").innerHTML="Total marks="+totalmarks;
+        }
+    </script>
+</html>
