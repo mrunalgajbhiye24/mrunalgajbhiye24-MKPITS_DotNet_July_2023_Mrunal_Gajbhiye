@@ -1,0 +1,26 @@
+<html>
+    <form name="f1">
+        enter number1: <input type="text" id="t1"/><br><br>
+        enter number2: <input type="text" id="t2"/><br><br>
+        <input type="button" value="ok" onclick="calculate();"/><br><br>
+        <span id="result">Result</span>
+    </form>
+
+    <script language="javascript">
+        function calculate()
+        {
+            var num1=parseFloat(document.getElementById("t1").value);
+            var num2=parseFloat(document.getElementById("t2").value);
+            if (num1==num2)
+            {
+                document.getElementById("result").innerHTML="Two numbers are equal";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="two numbers are not equal";
+            
+            }    
+
+        }
+    </script>
+</html>

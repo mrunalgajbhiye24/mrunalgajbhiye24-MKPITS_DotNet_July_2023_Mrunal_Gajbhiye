@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  
+  <div class="jumbotron">
+    <h1>Salary</h1>
+  </div>
+  <div class="container">
+    <form name="f1">
+        Enter Employee Name: <input type="text" id="t1"><br><br>
+        Enter basic Salary: <input type="text" id="t2"><br><br>
+        <input type="button" value="Enter Employee Details" onclick="emp();"><br><br>
+        <span id="res">Result</span>
+    </form>
+  </div>
+
+  <script>
+    function emp()
+    {
+        var name=document.getElementById("t1").value;
+        var salary=parseFloat(document.getElementById("t2").value);
+
+        var hra=0.23*salary;
+        var da=0.43*salary;
+        var total=hra+da+salary
+    
+
+        document.getElementById("res").innerHTML="Employe name :"+name+"<br>"+
+        "HRA :"+hra+"<br>"+
+        "DA :" +da+"<br>"+
+        "total ="+total;
+    }
+  </script>

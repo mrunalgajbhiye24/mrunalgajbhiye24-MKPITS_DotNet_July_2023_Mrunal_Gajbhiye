@@ -1,0 +1,22 @@
+<html>
+    <form name="f1">
+        enter age: <input type="text" id="t1"><br><br>
+        <input type="button" value="Ok" onclick="display();"><br><br>
+        <span id="res">Show</span>
+    </form>
+
+    <script>
+        function display()
+        {
+            var age=document.getElementById("t1").value;
+            if(age<18)
+            {
+                document.getElementById("res").innerHTML="Not Eligible to vote";
+            }
+            else
+            {
+                document.getElementById("res").innerHTML="Eligible to vote";
+            }
+        }
+    </script>
+</html>

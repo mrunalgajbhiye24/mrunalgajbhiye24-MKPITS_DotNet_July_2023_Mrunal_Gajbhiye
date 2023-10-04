@@ -1,0 +1,33 @@
+<html>
+    <form name="f1">
+        enter number1: <input type="text" id="t1"/><br><br>
+        enter number2: <input type="text" id="t2"/><br><br>
+        enter number3: <input type="text" id="t3"/><br><br>
+        <input type="button" value="ok" onclick="calculate();"/><br><br>
+        <span id="result">Result</span>
+    </form>
+
+    <script language="javascript">
+        function calculate()
+        {
+            var num1=parseFloat(document.getElementById("t1").value);
+            var num2=parseFloat(document.getElementById("t2").value);
+            var num3=parseFloat(document.getElementById("t3").value);
+            if (num1>num2 && num1>num3)
+            {
+                document.getElementById("result").innerHTML="greater no=num1";
+            }
+            if  (num2>num1 && num2>num3)
+
+            {
+                document.getElementById("result").innerHTML="greatest no=num2";
+            }
+            if (num3>num1 && num3>num2)
+            {
+                document.getElementById("result").innerHTML="greatest no=num3";
+
+            }
+            
+        }
+    </script>
+</html>
