@@ -1,0 +1,27 @@
+<html>
+    <body style="text-align: center;">
+        <div id="test">
+            <codes>code</codes>
+            <italic>Some text</italic>
+        </div>
+        <p>MKPITS</p>
+
+        <button onclick="innerHTMLFn();">Inner HTML</button>
+        <button onclick="innerTextFn();">InnerText</button>
+
+        <p id="op">MKPITs</p>
+
+        <script>
+            function innerTextFn()
+            {
+                var x=document.getElementById('test');
+                alert(x.innerText);
+            }
+            function innerHTMLFn()
+            {
+                var x=document.getElementById('test');
+                alert(x.innerHTMl);
+            }
+        </script>
+    </body>
+</html>
