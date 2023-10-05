@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      </head>
+      
+    <form>
+        <div class="jumbotron text-center">
+            <h1>Day Names</h1>
+        </div>
+
+        <div class="container">
+            <div class="form-group">
+                <label for="c1">Enter DayNo</label>
+                <input type="text" placeholder="Enter Dayno"  class="form-control mt-4" id="c1">
+                <input type="button" value="Submit" class="form-control btn-success mt-4" onclick="display();"><br><br>
+                <span id="result">Result</span>
+
+            </div>
+        </div>
+    </form>
+
+    <script language="javascript">
+        function display()
+        {
+            var dayno=parseInt(document.getElementById("c1").value);
+            var ans="";
+            switch(dayno)
+            {
+                case 1:
+                    ans="monday";
+                    break;
+
+                    case 2:
+                        ans="tuesday";
+                        break;
+
+                        case 3:
+                            ans="wednesday";
+                            break;
+
+                            case 4:
+                                ans="thursday";
+                                break;
+
+                                case 5:
+                                    ans="friday";
+                                    break;
+
+                                    case 6:
+                                       ans="saturday";
+                                       break;
+
+                                        case 7:
+                                           ans="sunday";
+                                           break;
+
+                                           default:
+		                                     ans="invalid dayno";
+		                                     break;
+            }
+            document.getElementById("result").innerHTML="Day Name :"+ans;
+        }
+    </script>
+    </html>

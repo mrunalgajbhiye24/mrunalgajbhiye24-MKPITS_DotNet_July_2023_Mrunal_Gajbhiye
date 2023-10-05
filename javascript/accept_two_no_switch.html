@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      </head>
+      
+    <form>
+        <div class="jumbotron text-center">
+            <h1>Calculation</h1>
+        </div>
+
+        <div class="container">
+            <div class="form-group">
+                <label for="c1">Enter number 1</label>
+                <input type="text" placeholder="Enter number1"  class="form-control " id="c1"><br><br>
+                
+
+                <label for="c2">Enter number 2</label>
+                <input type="text" placeholder="Enter number2"  class="form-control " id="c2"><br><br>
+
+                <label for="c3">Enter +,-,*,/</label>
+                <input type="text"   class="form-control " id="c3">
+
+                <input type="button" value="Submit" class="form-control btn btn-success mt-4" onclick="check();"/>
+
+                <span id="res" class="form-control mt-4">Result</span>
+
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function check()
+        {
+            var num1=parseInt(document.getElementById("c1").value);
+            var num2=parseInt(document.getElementById("c2").value);
+            var op=document.getElementById("c3").value;
+            var ans;
+            switch(op)
+            {
+                case "+":
+                    ans=num1+num2;
+                    break;
+
+                    case "-":
+                        ans=num1-num2;
+                        break;
+                        
+                        case "*":
+                            ans=num1*num2;
+                            break;
+
+                            case "/":
+                                ans=num1/num2;
+                                break;
+
+                                default:
+                                    ans="invalid operator"
+                                    break;
+            }
+            document.getElementById("res").innerHTML="result ="+ans;
+        }
+    </script>
+    </html>
