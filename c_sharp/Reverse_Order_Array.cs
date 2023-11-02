@@ -1,32 +1,43 @@
-﻿using System;
+using System;
 using System.CodeDom.Compiler;
 
-namespace Reverse_Order_Array
+using System;
+
+class Program
 {
-    internal class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        int[] arr = { 1, 2, 2, 3, 4, 4, 4, 5, 5, 6 };
+
+        int[] frequencies = new int[arr.Length];
+
+        for (int i = 0; i < arr.Length; i++)
         {
-            int[] num = new int[3];
-            int temp;
-            for(int i=0;i<3;i++)
+            int count = 1;
+
+            // Check if this element has already been counted
+            if (frequencies[i] == -1)
+                continue;
+
+            for (int j = i + 1; j < arr.Length; j++)
             {
-                Console.Write("Enter Number" + " " + i + ":");
-                num[i] = Convert.ToInt32(Console.ReadLine());
+                if (arr[i] == arr[j])
+                {
+                    count++;
+                    frequencies[j] = -1; // Mark the element as counted
+                }
             }
-            Console.WriteLine("The values store into the array are:");
-            for (int i = 0; i < 3; i++)
+
+            frequencies[i] = count;
+        }
+
+        Console.WriteLine("Element frequencies:");
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (frequencies[i] != -1)
             {
-                Console.Write(num[i] +" ");
+                Console.WriteLine($"Element {arr[i]}: {frequencies[i]} times");
             }
-            Console.WriteLine();
-            Console.WriteLine("The values store into the array in reverse are :");
-            for (int i = 2; i >= 0 ; i--)
-            {
-                Console.Write(num[i] + " " );
-            }
-            Console.ReadLine();
-               
         }
     }
 }
