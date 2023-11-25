@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
-namespace HashTable_Windows_Form
+namespace Sorted_List_Windows_Form
 {
     public partial class Form1 : Form
     {
@@ -16,10 +16,10 @@ namespace HashTable_Windows_Form
         {
             InitializeComponent();
         }
-        Hashtable ht = new Hashtable();
+        SortedList sl = new SortedList();
         private void button1_Click(object sender, EventArgs e)
         {
-            ht.Add(textBox1.Text, textBox2.Text);
+            sl.Add(textBox1.Text, textBox2.Text);
             textBox1.Clear();
             textBox2.Clear();
             textBox1.Focus();
@@ -28,20 +28,12 @@ namespace HashTable_Windows_Form
         private void button2_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
-            ICollection key = ht.Keys;
-            foreach(string s in ht.Keys)
+            ICollection key = sl.Keys;
+            foreach(string s in key)
             {
-                sb.Append("Album Name: " + s + "\n");
+                sb.Append("Album Name: " + s +" "+"Singer Name:" + sl[s]+"\n");
             }
             label3.Text = sb.ToString();
-
-            StringBuilder sb1 = new StringBuilder();
-            ICollection val = ht.Values;
-            foreach (string s in ht.Values)
-            {
-                sb1.Append( "Singer Name: " + s + "\n");
-            }
-            label4.Text = sb1.ToString();
         }
     }
 }
