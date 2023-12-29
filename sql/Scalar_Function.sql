@@ -10,6 +10,6 @@ create function fun2
 returns int
 as begin
 return(Select @incomes1 / @tax_rate*100)
-end+
+end
 drop function fun2
 Select dbo.fun2(Income1,Tax_Rate) as detail from CalculateTax
